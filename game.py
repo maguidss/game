@@ -7,7 +7,7 @@ screen = pygame.display.set_mode((500,600))
 pygame.display.set_caption('PuzzlePacked IQ Games')
 clock = pygame.time.Clock()
 test_font = pygame.font.Font(None, 50)
-background_surf = pygame.image.load('Images\_background.jpg').convert()
+background_surf = pygame.image.load('Game\Images\_background.jpg').convert()
 
 
 

@@ -1,5 +1,6 @@
 import pygame, sys
 from settings import Button 
+from jogo import jogar
 
 #ecrã
 pygame.init()
@@ -17,43 +18,44 @@ def get_font(size):
 
 #tela de jogo
 def play():
-    #definir o titulo da janela
-    pygame.display.set_caption("Play")
+    jogar()
+    # #definir o titulo da janela
+    # pygame.display.set_caption("Play")
 
-    while True:
-        #obter a posição do mouse
-        PLAY_MOUSE_POS = pygame.mouse.get_pos()
+    # while True:
+    #     #obter a posição do mouse
+    #     PLAY_MOUSE_POS = pygame.mouse.get_pos()
        
-        #preencher a tela com preto
-        screen.fill("black")
+    #     #preencher a tela com preto
+    #     screen.fill("black")
         
-        #renderizar o texto
-        PLAY_TEXT = get_font(45).render("This is the PLAYscreen", True, "White")
-        PLAY_RECT = PLAY_TEXT.get_rect(center=(640,260))
-        screen.blit(PLAY_TEXT, PLAY_RECT)
+    #     #renderizar o texto
+    #     PLAY_TEXT = get_font(45).render("This is the PLAYscreen", True, "White")
+    #     PLAY_RECT = PLAY_TEXT.get_rect(center=(640,260))
+    #     screen.blit(PLAY_TEXT, PLAY_RECT)
 
-        #criar o botão "BACK"
-        PLAY_BACK = Button(image =None, pos=(640, 460), 
-                           text_input ="BACK", font=get_font(75), base_color="White", hovering_color="Pink")
+    #     #criar o botão "BACK"
+    #     PLAY_BACK = Button(image =None, pos=(300, 500), 
+    #                        text_input ="BACK", font=get_font(75), base_color="White", hovering_color="Pink")
         
-       #Mudar a cor do botão se o rato estiver a passar por cima dele 
-        PLAY_BACK.changeColor(PLAY_MOUSE_POS)
-        PLAY_BACK.update(screen)
+    #    #Mudar a cor do botão se o rato estiver a passar por cima dele 
+    #     PLAY_BACK.changeColor(PLAY_MOUSE_POS)
+    #     PLAY_BACK.update(screen)
 
-        #loop de eventos eventos
-        for event in pygame.event.get():
-           #se o utilizador fechar a janela, sair do programa
-            if event.type == pygame.QUIT:
-                pygame.quit()
-                sys.exit()
-            #Se o utilizador clicar no botão esquerdo do rato
-            if event.type == pygame.MOUSEBUTTONDOWN:
-                #Voltar ao menu principal se o botão "BACK" for clicado
-                if PLAY_BACK.checkForInput(PLAY_MOUSE_POS):
-                    main_menu()
+    #     #loop de eventos eventos
+    #     for event in pygame.event.get():
+    #        #se o utilizador fechar a janela, sair do programa
+    #         if event.type == pygame.QUIT:
+    #             pygame.quit()
+    #             sys.exit()
+    #         #Se o utilizador clicar no botão esquerdo do rato
+    #         if event.type == pygame.MOUSEBUTTONDOWN:
+    #             #Voltar ao menu principal se o botão "BACK" for clicado
+    #             if PLAY_BACK.checkForInput(PLAY_MOUSE_POS):
+    #                 main_menu()
 
-        #atualizar a tela
-        pygame.display.update()
+    #     #atualizar a tela
+    #     pygame.display.update()
 
 #tela de options
 def options(): #options screen

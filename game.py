@@ -97,5 +97,5 @@ while True:
     Pieces.draw_pieces_type1(board, rectangles_center, placing = {11, 12, 13, 14, 21, 23, 24, 31, 33, 34})
 
 
-
     pygame.display.update()
+    

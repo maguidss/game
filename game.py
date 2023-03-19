@@ -14,7 +14,6 @@ level_rect = level_surf.get_rect(center = (250, 50))
 pygame.draw.rect(screen, 'Red', level_rect, 10)
 
 
-
 while True: 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:

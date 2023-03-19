@@ -61,3 +61,11 @@ class Button():
 
 
 
+
+#game settings
+WIDTH = 1100
+HEIGHT = 641
+FPS= 60
+title = "PuzzlePacked IQ Games"
+TILESIZE = 50
+GAME_SIZE = 4
